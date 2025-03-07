@@ -2091,5 +2091,58 @@ fileprivate extension CAMediaTimingFunction {
         }
         
         return pointArray
-    }
+    }	
+
+	// Definición de una estructura
+	struct Persona {
+		var nombre: String
+		var edad: Int
+		
+		func saludar() {
+			print("Hola, soy \(nombre) y tengo \(edad) años.")
+		}
+	}
+
+	// Función para calcular el factorial de un número
+	func factorial(_ n: Int) -> Int {
+		if n <= 1 {
+			return 1
+		}
+		return n * factorial(n - 1)
+	}
+
+	// Programa principal
+	func pepe() {
+		// Creación de una instancia de Persona
+		let persona = Persona(nombre: "Ana", edad: 28)
+		persona.saludar()
+		
+		// Uso de un bucle for
+		print("\nContando del 1 al 5:")
+		for i in 1...5 {
+			print(i)
+		}
+		
+		// Uso de un bucle while con una condición
+		var numero = 10
+		print("\nCuenta regresiva:")
+		while numero > 0 {
+			print(numero)
+			numero -= 1
+		}
+		
+		// Cálculo y muestra del factorial
+		let numFactorial = 5
+		let resultado = factorial(numFactorial)
+		print("\nEl factorial de \(numFactorial) es \(resultado)")
+		
+		// Uso de opcionales y desempaquetado seguro
+		let textoNumerico: String? = "42"
+		if let numero = Int(textoNumerico!) {
+			print("\nEl número convertido es: \(numero)")
+		} else {
+			print("\nNo se pudo convertir el texto a número")
+		}
+	}
+
 }
